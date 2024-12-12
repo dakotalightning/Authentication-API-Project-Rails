@@ -1,24 +1,26 @@
-# README
+# Authentication API Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Re: Authentication-API-Project](https://github.com/dakotalightning/Authentication-API-Project)
 
-Things you may want to cover:
+A secure authentication API built with Rails, featuring JWT-based authentication, user registration, etc.
 
-* Ruby version
+## Features
 
-* System dependencies
+- JWT-based authentication
+- User registration with password hashing
+- Redis-based token management
+- Comprehensive test coverage
 
-* Configuration
+#### Coming Soon 👀
 
-* Database creation
+- Protected routes
+- Roles (admin/user)
+- Banning - Restrict a user
 
-* Database initialization
+## Stay in touch
 
-* How to run the test suite
+- Author - [Dakota Lightning](https://github.com/dakotalightning)
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
-
-* ...
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
