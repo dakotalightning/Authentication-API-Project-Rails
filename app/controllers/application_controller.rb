@@ -15,5 +15,4 @@ class ApplicationController < ActionController::API
         render json: { error: "unauthorized" }, status: :unauthorized  unless @current_user = User.find(decoded [:username])
       end
     end
-
 end

@@ -1,5 +1,4 @@
 class AuthController < ApplicationController
-
   skip_before_action :authenticate_request
 
   def token
@@ -9,7 +8,7 @@ class AuthController < ApplicationController
       auth_token = jwt_encode(username: user.username)
       render json: { token: auth_token }, status: :ok
     else
-      render json: { error: 'unauthorized' }, status: :unauthorized
+      render json: { error: "unauthorized" }, status: :unauthorized
     end
   end
 
@@ -30,5 +29,4 @@ class AuthController < ApplicationController
   def user_params
     params.require(:auth).permit(:username, :password)
   end
-
 end

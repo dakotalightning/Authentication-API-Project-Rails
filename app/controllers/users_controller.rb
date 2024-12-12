@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [ :show ]
 
   # GET /users
   def index
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   # GET /users/{username}
   def show
-    render json: @user.to_json(only: [:username]), status: :ok
+    render json: @user.to_json(only: [ :username ]), status: :ok
   end
 
   private
@@ -21,5 +21,4 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:username])
     end
-
 end

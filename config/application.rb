@@ -42,11 +42,10 @@ module LendeskRailsApi
     config.api_only = true
 
     config.cache_store = :redis_store, {
-      host: ENV['REDIS_HOST'] || 'localhost',
-      port: ENV['REDIS_PORT'] || 6379,
+      host: ENV["REDIS_HOST"] || "localhost",
+      port: ENV["REDIS_PORT"] || 6379,
       db: 0,
-      namespace: 'auth_service'
+      namespace: "auth_service"
     }
-
   end
 end
