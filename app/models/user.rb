@@ -19,5 +19,4 @@ class User
               with: /\A(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}\z/,
               message: "must include uppercase, lowercase, number and special character"
             }
-
 end
