@@ -13,13 +13,11 @@ class User
     { "username" => nil, "password_digest" => nil }
   end
 
-  validates :username, presence: true, format: { with: /\A[a-zA-Z0-9_]+\z/ }
+  validates :username, presence: true, format: { with: /\A[a-zA-Z0-9_]+\z/ }, uniqueness: true
   validates :password, presence: true, length: { minimum: 8 },
             format: {
               with: /\A(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8,}\z/,
               message: "must include uppercase, lowercase, number and special character"
             }
 
-
-  private
 end

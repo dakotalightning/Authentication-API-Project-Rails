@@ -28,6 +28,10 @@ module RedisAdapter
       record ? new(JSON.parse(record)) : nil
     end
 
+    def exists?(username)
+      self.find(username)
+    end
+
     def all
       keys = redis.keys(redis_key("*"))
       keys.map { |key| { username: JSON.parse(redis.get(key))["username"] } }

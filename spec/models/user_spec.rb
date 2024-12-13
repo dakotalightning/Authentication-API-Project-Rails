@@ -47,5 +47,11 @@ RSpec.describe User, type: :model do
       subject.password = 'Password1'
       expect(subject).to_not be_valid
     end
+
+    it 'is not valid with a non-unique username' do
+      described_class.new(username: 'testuser', password: 'Password1!').save
+
+      expect(subject).to_not be_valid
+    end
   end
 end
